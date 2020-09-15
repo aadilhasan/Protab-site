@@ -1,11 +1,12 @@
 {
-  "name": "gatsby-starter-lander",
-  "author": "Hunter Chang",
+  "name": "protab_site",
+  "author": "Aadil Hasan",
   "repository": "https://github.com/codebushi/gatsby-starter-lander",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
+    "start": "npx gatsby develop",
     "build": "gatsby build"
   },
   "dependencies": {

@@ -7,66 +7,95 @@ import Layout from '../components/layout/Layout';
 import SplitSection from '../components/SplitSection';
 import StatsBox from '../components/StatsBox';
 import customerData from '../data/customer-data';
-import HeroImage from '../svg/HeroImage';
+import heroImage from '../images/hero.png';
 import SvgCharts from '../svg/SvgCharts';
+import './styles.css';
+
+const features = [
+  {
+    title: 'Collections',
+    details: 'Save browser sessions, create custom bookmarks',
+    link: 'https://www.youtube.com/watch?v=3HD6IlDf7gQ'
+  },
+  {
+    title: 'Todos',
+    details: 'Create tasks, add deadline and get get alerts and notification of deadline',
+    link: 'https://www.youtube.com/watch?v=UOKQ_5k3fzM'
+  },
+  {
+    title: 'Tab Switcher',
+    details: 'Manage your open tabs and windows with ease',
+    link: 'https://www.youtube.com/watch?v=xAXHx6ef3Kg'
+  },
+  {
+    title: 'Notes',
+    details: 'A feature packed note app. Add images, videos and much more',
+    link: ''
+  },
+  {
+    title: 'Read Laters',
+    details: 'Add any page directly to the read later, and stay focused with your research',
+    link: 'https://www.youtube.com/watch?v=E_zRX5vS9No'
+  },
+  {
+    title: 'Quick Links ',
+    details: 'Add your favourite links directly to the quick link, and have easy access to them',
+    link: ''
+  }
+];
 
 export default () => (
   <Layout>
-    <section className="pt-20 md:pt-40">
-      <div className="container mx-auto px-8 lg:flex">
-        <div className="text-center lg:text-left lg:w-1/2">
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
-            Main title of your landing page
+    <section className="pt-20">
+      <div className="container mx-auto px-8 lg:flex lg:flex-col">
+        <div className="text-center">
+          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none heading">
+            A productivity chrome extension
           </h1>
-          <p className="text-xl lg:text-2xl mt-6 font-light">
-            Free landing page template to promote your business startup and generate leads for the
-            offered services
+          <p className="text-xl lg:text-2xl mt-6 font-light spa sub-heading">
+            Boost your productivity with a highly customizable new tab. Have easy and fast access to
+            all your productivity apps and much more.
           </p>
-          <p className="mt-8 md:mt-12">
-            <Button size="lg">Get Started</Button>
+          {/* <p className="mt-8 md:mt-12">
+            <a
+              alt=""
+              href="https://chrome.google.com/webstore/detail/protab/jbfnkcpnlnedmfafgpcidgdfkkikgmbn"
+            >
+              <Button size="lg">Download</Button>
+            </a>
           </p>
-          <p className="mt-4 text-gray-600">Sed fermentum felis ut cursu</p>
+          <p className="mt-4 text-gray-600">Sed fermentum felis ut cursu</p> */}
         </div>
-        <div className="lg:w-1/2">
-          <HeroImage />
+        <div className="demo">
+          <iframe
+            title="protab demo"
+            src="https://www.youtube.com/embed/rPfnC8sP_yc"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         </div>
       </div>
     </section>
     <section id="features" className="py-20 lg:pb-40 lg:pt-48">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">Main Features</h2>
-        <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
-          <div className="flex-1 px-3">
-            <Card className="mb-8">
-              <p className="font-semibold text-xl">Service One</p>
-              <p className="mt-4">
-                An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio
-                velna vitae auctor integer.
-              </p>
-            </Card>
-          </div>
-          <div className="flex-1 px-3">
-            <Card className="mb-8">
-              <p className="font-semibold text-xl">Service Two</p>
-              <p className="mt-4">
-                An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio
-                velna vitae auctor integer.
-              </p>
-            </Card>
-          </div>
-          <div className="flex-1 px-3">
-            <Card className="mb-8">
-              <p className="font-semibold text-xl">Service Three</p>
-              <p className="mt-4">
-                An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio
-                velna vitae auctor integer.
-              </p>
-            </Card>
-          </div>
+        <div className="feature-list sm:flex-row sm:-mx-3 mt-12">
+          {features.map(feature => {
+            return (
+              <div className="flex-1 px-4">
+                <Card>
+                  <p className="font-semibold text-xl">{feature.title}</p>
+                  <p className="mt-4">{feature.details}</p>
+                  {feature.link && <a href={feature.link}> DEMO </a>}
+                </Card>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
-    <SplitSection
+    {/* <SplitSection
       id="services"
       primarySlot={
         <div className="lg:pr-32 xl:pr-48">
@@ -135,14 +164,21 @@ export default () => (
           ))}
         </div>
       </div>
-    </section>
+    </section> */}
     <section className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center">
-      <h3 className="text-5xl font-semibold">Ready to grow your business?</h3>
-      <p className="mt-8 text-xl font-light">
+      <h4 className="text-5xl font-semibold">Are you ready to become more productive ? </h4>
+      {/* <p className="mt-8 text-xl font-light">
         Quis lectus nulla at volutpat diam ut. Enim lobortis scelerisque fermentum dui faucibus in.
-      </p>
+      </p> */}
       <p className="mt-8">
-        <Button size="xl">Get Started Now</Button>
+        <div className="hidden md:block">
+          <a
+            alt=""
+            href="https://chrome.google.com/webstore/detail/protab/jbfnkcpnlnedmfafgpcidgdfkkikgmbn"
+          >
+            <Button size="lg">Download ProTab now for chrome</Button>
+          </a>
+        </div>
       </p>
     </section>
   </Layout>
