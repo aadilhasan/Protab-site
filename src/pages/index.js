@@ -49,7 +49,7 @@ export default () => (
             Boost your productivity with a highly customizable new tab. Have easy and fast access to
             all your productivity apps and much more.
           </p>
-          {/* <p className="mt-8 md:mt-12">
+          <p className="mt-8 md:mt-12 hidden download">
             <a
               alt=""
               href="https://chrome.google.com/webstore/detail/protab/jbfnkcpnlnedmfafgpcidgdfkkikgmbn"
@@ -57,7 +57,6 @@ export default () => (
               <Button size="lg">Download</Button>
             </a>
           </p>
-          <p className="mt-4 text-gray-600">Sed fermentum felis ut cursu</p> */}
         </div>
         <div className="demo">
           <iframe
@@ -91,12 +90,12 @@ export default () => (
     <section className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center">
       <h4 className="text-5xl font-semibold">Are you ready to become more productive ? </h4>
       <p className="mt-8">
-        <div className="hidden md:block">
+        <div>
           <a
             alt=""
             href="https://chrome.google.com/webstore/detail/protab/jbfnkcpnlnedmfafgpcidgdfkkikgmbn"
           >
-            <Button size="lg">Download ProTab now for chrome</Button>
+            <Button size="lg">Download Protab</Button>
           </a>
         </div>
       </p>
