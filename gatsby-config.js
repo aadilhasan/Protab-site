@@ -4,7 +4,8 @@ module.exports = {
       resolve: `gatsby-theme-codebushi`,
       options: {
         tailwindConfig: `tailwind.config.js`
-      }
+      },
+      pathPrefix: '/protab'
     }
   ]
 };
