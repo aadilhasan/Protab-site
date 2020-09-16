@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "name": "protab_site",
+  "description": null,
+  "icons": {
+    "60": "/icons-9f8b53bdfdaf4f4b4459abeb9273b402/firefox_app_60x60.png",
+    "128": "/icons-9f8b53bdfdaf4f4b4459abeb9273b402/firefox_app_128x128.png",
+    "512": "/icons-9f8b53bdfdaf4f4b4459abeb9273b402/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": null,
+    "url": null
+  }
+}
