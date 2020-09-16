@@ -2,6 +2,8 @@ import React from 'react';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import Layout from '../components/layout/Layout';
+import SEO from '../components/Seo';
+
 import './styles.css';
 
 const features = [
@@ -39,6 +41,7 @@ const features = [
 
 export default () => (
   <Layout>
+    <SEO />
     <section className="pt-20">
       <div className="container mx-auto px-8 lg:flex lg:flex-col">
         <div className="text-center">
