@@ -64,6 +64,7 @@ export default () => (
         <div className="demo">
           <iframe
             title="protab demo"
+            className="demo-video"
             src="https://www.youtube.com/embed/rPfnC8sP_yc"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

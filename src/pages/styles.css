@@ -29,7 +29,7 @@ header {
   justify-content: center;
 }
 
-iframe {
+.demo-video {
   max-width: 1000px;
   max-height: 560px;
   width: 100vw;
@@ -41,13 +41,13 @@ iframe {
 }
 
 @media only screen and (max-width: 1024px) {
-  iframe {
+  .demo-video {
     max-height: 360px;
   }
 }
 
 @media only screen and (max-width: 720px) {
-  iframe {
+  .demo-video {
     max-height: 267px;
     width: 100vw;
     height: 100vh;
@@ -60,4 +60,8 @@ iframe {
   .download {
     display: block;
   }
+}
+.uninstall-feedback-form {
+  height: 100vh;
+  width: 100vw;
 }

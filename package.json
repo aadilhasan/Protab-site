@@ -11,6 +11,7 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
+    "firebase": "^7.21.0",
     "gatsby": "^2.18.18",
     "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-theme-codebushi": "1.0.0",
