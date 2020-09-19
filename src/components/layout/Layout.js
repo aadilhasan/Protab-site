@@ -14,7 +14,7 @@ const firebaseConfig = {
 };
 
 const initFirebse = async () => {
-  if (location.pathname.indexOf('uninstall') === -1) return;
+  if (location.pathname.indexOf('uninstall') === -1 || location.search.length < 2) return;
   try {
     import('firebase').then(firebase => {
       firebase.initializeApp(firebaseConfig);
@@ -31,16 +31,17 @@ const initFirebse = async () => {
 
 const getData = () => {
   const search = location.search;
-  if (search.length < 2) return { id: 'unknown', email: 'unknown' };
-  let [str1, str2] = search.substring(1, search.length).split('&');
+  let [str1 = '', str2 = ''] = search.substring(1, search.length).split('&');
   const [key1, value1] = str1.split('=');
   const [key2, value2] = str2.split('=');
-  return {
-    [key1]: value1,
-    [key2]: value2,
-    timestamp: Date.now(),
-    date: new Date().toUTCString()
-  };
+  const data = { timestamp: Date.now(), date: new Date().toUTCString() };
+  if (key1 && value1) {
+    data[key1] = value1;
+  }
+  if (key2 && value2) {
+    data[key2] = value2;
+  }
+  return data;
 };
 
 const Layout = ({ children }) => {
